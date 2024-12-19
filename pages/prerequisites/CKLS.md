@@ -301,7 +301,7 @@ Microsoft Edge (latest version), Mozilla Firefox (latest version), Google Chrome
 * Customers can manage their own URL (https://customername.customerdomain.com) using 301 or 302 HTTP redirects to the instance CrossKnowledge domain (https://customername.(eu,lms,na,sa,asia).crossknowledge.com or https://customername.ckls.crossknowledge-china.com)
 
 
-#### Sunset Assess&Test (Learnosity)
+### Sunset Assess&Test (Learnosity)
 
 * We will sunset Assess&Test at the end of February 2025.
 * The relateds URLs of Learnosity won't need to be whitelisted by customers and their partners starting from March 1 2025.
