@@ -7,13 +7,6 @@ permalink: CKLS-prerequisites
 folder: prerequisites
 ---
 
-<div class="alert alert-warning" role="alert">
-    <h2>Requirements for use</h2>
-    <h3>Unique email address for Program Builder Early Adoption and new reporting services</h3>
-    Requirements for Program Builder Early Adoption and new reporting services:  all users (administrators and learners), will need to have <b>a unique email address</b> to access the Program Builder Early Adopter and New Reporting Service.
-</div>
-
-
 ## Workstation requirements
 
 CrossKnowledge Learning Suite is a web-based application needing the following environment to run properly:
