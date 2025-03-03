@@ -70,7 +70,7 @@ SSH keys should follow the following rules:
 ### Domain white-listing
 The following domain names should be whitelisted by customers and their partners.
 ```txt
-https://*.crossknowledge.com, https://*.crossknowledge-china.com, https://*.learnosity.com​, https://s3.amazonaws.com/assets.learnosity.com, https://s3.amazonaws.com/learnositymediaprocessed, https://*.powerbi.com, https://content.powerapps.com, https://wabi-us-east2-d-primary-redirect.analysis.windows.net
+https://*.crossknowledge.com, https://*.crossknowledge-china.com, https://*.powerbi.com, https://content.powerapps.com, https://wabi-us-east2-d-primary-redirect.analysis.windows.net
 ```
 
 If wildcards (*) are not allowed, authorise the following sub-domains:<br/>
@@ -97,64 +97,6 @@ https://spa.crossknowledge.com
 https://api.crossknowledge.com
 https://api.crossknowledge-china.com
 https://app-cdn.crossknowledge.com
-
-Learnosity specific URLs
-
-https://authorapi.learnosity.com
-https://items.learnosity.com
-https://items-va.learnosity.com
-https://items-au.learnosity.com
-https://items-ie.learnosity.com
-https://items-ca.learnosity.com
-https://reports.learnosity.com
-https://reports-va.learnosity.com
-https://reports-au.learnosity.com
-https://reports-ie.learnosity.com
-https://reports-ca.learnosity.com
-https://data.learnosity.com
-https://data-va.learnosity.com
-https://data-au.learnosity.com
-https://data-ie.learnosity.com
-https://data-ca.learnosity.com
-https://annotations.learnosity.com
-https://annotations-va.learnosity.com
-https://annotations-au.learnosity.com
-https://annotations-ie.learnosity.com
-https://annotations-ca.learnosity.com
-https://assess.learnosity.com
-https://assess-va.learnosity.com
-https://assess-au.learnosity.com
-https://assess-ie.learnosity.com
-https://assess-ca.learnosity.com
-https://eventbus.learnosity.com
-https://eventbus-va.learnosity.com
-https://eventbus-au.learnosity.com
-https://eventbus-ie.learnosity.com
-https://eventbus-ca.learnosity.com
-https://events.learnosity.com
-https://events-va.learnosity.com
-https://events-au.learnosity.com
-https://events-ie.learnosity.com
-https://events-ca.learnosity.com
-https://questions.learnosity.com
-https://questions-va.learnosity.com
-https://questions-au.learnosity.com
-https://questions-ie.learnosity.com
-https://questions-ca.learnosity.com
-https://questioneditor.learnosity.com
-https://questioneditor-va.learnosity.com
-https://questioneditor-au.learnosity.com
-https://questioneditor-ie.learnosity.com
-https://questioneditor-ca.learnosity.com
-https://schemas.learnosity.com
-https://schemas-va.learnosity.com
-https://schemas-au.learnosity.com
-https://schemas-ie.learnosity.com
-https://schemas-ca.learnosity.com
-https://assets.learnosity.com
-https://shared.learnosity.com
-https://s3.amazonaws.com/assets.learnosity.com
-https://s3.amazonaws.com/learnositymediaprocessed
 
 Power BI specific URLs
 
@@ -292,11 +234,4 @@ Microsoft Edge (latest version), Mozilla Firefox (latest version), Google Chrome
 * CrossKnowledge only supports HTTPS protocol with its own domains.
 
 * Customers can manage their own URL (https://customername.customerdomain.com) using 301 or 302 HTTP redirects to the instance CrossKnowledge domain (https://customername.(eu,lms,na,sa,asia).crossknowledge.com or https://customername.ckls.crossknowledge-china.com)
-
-
-### Sunset Assess&Test (Learnosity)
-
-* We will sunset Assess&Test at the end of February 2025.
-* The relateds URLs of Learnosity won't need to be whitelisted by customers and their partners starting from March 1 2025.
-  
 
