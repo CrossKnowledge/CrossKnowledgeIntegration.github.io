@@ -1256,6 +1256,7 @@ param:
   facilitatorGuids:
     desc: "Filter on the GUID of back-office facilitators. Can contain several values separated by commas."
     type: "string"
+    deleted: true
 
   failedConnections:
     desc: "Whether to include failed connections."
