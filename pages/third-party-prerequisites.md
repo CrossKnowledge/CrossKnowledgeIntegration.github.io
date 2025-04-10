@@ -49,8 +49,6 @@ CrossKnowledge Learning Suite is conformant with the following standards:
 - AICC
 - SCORM 
 
-CKLS was certified by ADL for SCORM 1.2 compliance. 
-
 ### Content metadata
 
 The CKLS allows you to specify additional metadata for your learning resources. It is highly recommended to provide this metadata as it increases the findability of your content in the platform: 
