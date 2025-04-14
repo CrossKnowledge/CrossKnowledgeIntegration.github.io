@@ -12,154 +12,116 @@ folder: prerequisites
 
 ### Purpose of this article
 
-This article presents a set of prerequisites and constraints to respect when creating a new training content. It will ensure a proper implementation of CrossKnowledge technology.
+This article presents a set of prerequisites and constraints to respect when adding a learning resource to the CKLS. Respecting these guidelines will ensure that the content launches correctly for your learners and that the tracking is recorded correctly by the platform. 
 
-It also offers a set of best practices to minimize problems during integration phases.
+### Terminology
 
-### Glossary
+LMS | Learning Management System. Software to manage and distribute training courses with e-learning content. 
+SCORM | Sharable Content Object Reference Model. This is a global standard that ensures that e-learning content created in various authoring tools can be imported and functions correctly in any learning platform. SCORM defines how the content should be packaged so that it can be imported in the LMS, and how the content can communicate with the learning platform. 
+AICC | Aviation Industry CBT Committee. This is a global standard that ensures that e-learning content created in various authoring tools can be imported and functions correctly in any learning platform. It is the predecessor of SCORM but is still used actively by certain content providers.
+SCO | Shareable Content Object. A SCO is the smallest content unit that can be launched and tracked by the LMS. 
 
-LMS | Learning Management System. Software to administrate and provide trainings and training contents. Also referred to as elearning platform.
-SCORM 1.2 and 2004 | Sharable Content Object Reference Model. This is the standard regarding content creation model. SCORM defines the structure of all interfaces: how the LMS launches the content, how information are sent back to the LMS, content description...
-AICC | Acronym for Aviation Industry CBT Committee.
-SCO | Shareable Content Object. SCO is the SCORM term for a unit activity. It's the most precise hierarchical level of content files in a Scorm package.
+## General prerequisites
 
-## Prerequisites and constraints
+### Workstation requirements
 
-### Workstation minimum requirements
+The CKLS application has certain requirements to ensure that the platform functions correctly for your learners. Ideally, the requirements for running your content should be aligned with the platform requirements to ensure that your content runs smoothly. 
 
-Please ensure yourself to have the minimum CKLS Prerequisites requirement to run the contents smoothly
+### Security restrictions
 
-Any new content creation from a third party provider should not override those workstation constraints of the CKLS.
+Executable files and files that contain server-side code can not be uploaded to the platform for security reasons. 
 
-Beware of Flash Player versions, newest contents are often developed on recent technologies which are not fully compatible with "older" user workstations.
+Some examples: .htaccess files, .php, .phps, .phtml, .pl, .cgi, .exe, .sh
 
-Here is the list of file types the CrossKnowledge LMS forbids for the creation of learning objects : htaccess, php* (php, php1, php4, php564...), phps, phtm, .phtml, pl, py, cgi, exe, sh.
-
-### File extensions not allowed in your contents
-
-For security reasons, any SCORM packages to be integrated in the platform must not contain files with following extensions :
-
--'htaccess'
--'php'
--'phps'
--'phtm'
--'phtml'
--'pl'
--'py'
--'cgi'
--'exe'
--'sh'
-
-Basically all the code that is server-side code extensions
+If your content package contains one of these files, you will not be able to upload it as a learning resource. 
 
 ### Network constraints
 
-To ensure good fluidity while playing contents, contents should meet the following constraints:
+You can upload content packages and files up to 200 MB via the CKLS back office. If your content files are exceeding that limit, we can provide you with a sftp account to allow you to upload larger files. Please get in touch with your Client Success team if you would need this. 
 
-Maximum size of content: 50 MB
-Resolution, encoding and quality of the videos must be compatible with Web standards. In other words, the content should not require installation of plugin to be played.
+We recommend aligning the size, quality, resolution… of your content files to the network configuration of your target audience. For example, if you have mainly learners that will access your content via a slower mobile connection, you might want to adjust the quality of your graphics so that they still load smoothly on a slower connection. 
 
-### Delivery and format constraints
+## Supported learning standards
 
-CrossKnowledge LMS is compliant with the following standards:
+### General compatibility
 
-- SCORM 1.2
-- SCORM 2004
+CrossKnowledge Learning Suite is conformant with the following standards: 
 - AICC
+- SCORM 
 
-And CrossKnowledge Learning Suite is able to upload those kind of documents:
+### Content metadata
 
-- SCORM 1.2 (zip)
-- SCORM 2004 (zip)
-- AICC (zip)
-- Video format (FLV, MP4)
-- Url format (Youtube, Slideshare...)
-- Downloadable PDF Documents
-- Downloadable Office Documents
-- Downloadable Image format (JPG, GIF)
-- Downloadable Sound format (MP3)
-
-The product is certified by ADL on Scorm 1.2 compliance. We strongly recommend to use mono-SCO and Scorm 1.2 as a delivery format. The delivery format is a zip archive, please be careful to have the manifest files (Scorm) or crs (AICC) properly to the root of those archives.
-
-Any content delivery should be delivered with an appendix document containing the following metadata of content:
-
+The CKLS allows you to specify additional metadata for your learning resources. It is highly recommended to provide this metadata as it increases the findability of your content in the platform: 
 - Title
 - Author
 - Description
 - Theoretical duration
 - Level of difficulty (1/2/3)
 - Learning goals for the content
-- Picture + resolution 640 x 360 px
+- Thumbnail picture (640 x 360 px)
 
-In terms of tracking, the content will have to sent back the following information to CrossKnowledge LMS:
+### Tracking data
 
-- Score
+The following information will be available in the CKLS reporting for the standardized content: 
 - Time spent
-- Status (incomplete/completed)
-- Location (bookmarking of the learner back of the slide on which he stopped)
+- Status (not started / incomplete / completed)
+- Score
 
-For multilingual content, one package per language will be issued. The CrossKnowledge "Training On Demand" solution is managing localization and content versioning. We recommend not to use the "Embedded in Blendedx" feature for third party content.
+## SCORM specifics
 
-### Scorm 1.2 and Scorm 2004
+### Supported versions
 
-In Scorm 1.2, progress does not exist, so the score field is often diverted from its original design to save the progress of the learner within the content. You will have something like this while advancing through slides (13%, 22%, 75%...).
+CKLS supports SCORM 1.2 and SCORM 2004. 
 
-When creating a Scorm 1.2 content, you will have the choice to save a quizz score or progress in the score field. This should be defined with your content provider as soon as possible. In the CrossKnowledge LMS, the visual progress bar moves relative to the status of learner regarding the content.
+For SCORM 2004, we support the different “editions”, but as many LMSes we did not implement all of the optional runtime commands, especially the specific navigation and sequencing commands (for example adl.nav.request).
 
+### Recommended format
+
+We recommend using SCORM 1.2 “single-SCO” packages as the delivery format. 
+
+Please ensure that the manifest file (imsmanifest.xml) is in the root of your zip archive, so that it can be read by the CKLS import routine. 
+
+### Multi-SCO content
+
+Although not recommended, the CKLS will accept multi-sco content. A navigation menu will appear on the left of the content so that the learner can navigate between the different SCOs. 
+
+### Bookmarking
+
+The CKLS will store the suspend_data so that a learner that leaves the content will return to the page where he left off on the next visit. 
+
+Please note that SCORM 1.2 specifies a maximum of 4096 characters for suspend_data. If your content would send more than 4096 characters, we suggest publishing your content as SCORM 2004 3rd or 4th edition, which allows 64000 characters. 
+
+### Progression
+
+SCORM 1.2 uses the lesson_status to track the progression of the learner. The visual progress bar in the CKLS will indicate 3 possible states for your learning resource: 
 - 0% => Not attempted
 - 50% => Incomplete
 - 100% => Completed
-If you want to convert the score to a progress in order to have a precise progress bar for the learner (13%, 22%, 75% as CrossKnowledge content), CrossKnowledge has developed a feature to permit it in Training on Demand.
 
-In Scorm 2004, the progress notion is introduced in addition to the score one. A content created on this format will be able to sent back score and progress through the cmi.progress_measure field for the LMS hosting it.
+In SCORM 2004, you can use cmi.progress_measure to have a more granular progression.  
 
-Moreover, our LMS does not interprete with Scorm 2004 navigation and sequencing commands (adl.nav.request). This will create an error. For a multi-chapter (multisco) content, a menu will appear on the left of the content to navigate between chapters. This chapters (sco) needs to be well defined in the imsmanifest.xml.
+## Good practices
 
-### Good practices
+### Content duration
 
-The content duration should not exceed half an hour. If the course is longer, it should be divided into several zip packages.
+The CKLS allows you to create “collections” of learning content, either in a “self service” format (Learning Channels) or in a “guided” learning path (Blendedx course). Therefore, we recommend that the duration of your learning resource should not exceed 30 minutes. If your content is longer than that, we recommend splitting up your content in different small chunks. This will improve the experience for your learner and will also give you a more granular view on how the learner progresses in your content. 
 
-As the contents will be imported in a CrossKnowledge learning path , this is not an issue.
+### Committing your SCORM tracking
 
-CrossKnowledge recommends to develop training contents or modules in SCORM 1.2, this standard is supported by the majority of elearning content creation tools and all the LMS.
+When your content communicates with the CKLS via SCORM, the tracking data is only saved (“committed”) when the content calls the function LMSCommit. 
 
-CrossKnowledge recommends to ask the content provider to call the function LMS.Commit("") after each slide or action in the learning content. This action will regularly back up datas in the LMS and will prevent any unsaved datas if the learner has a connection loss.
+We recommend committing the SCORM data on a regular basis, for example when a learner moves to the next chapter in your content. In case of an occasional connection loss, this ensures that recent data is kept, and the learner does not loose too much data. 
 
-CrossKnowledge recommends to use JavaScript function onbeforeunload and unonload to terminate and LMS.Finish("") the communication with our Scorm API.
+However, to protect our infrastructure from content that would be flooding the SCORM interface with excessive LMSCommit commands, the CKLS has a “5 second buffer” for commits: if a content sends two or more LMSCommit commands within a period of 5 seconds, only the first commit will be accepted. The other data will be buffered. Only changes in the lesson_status will be accepted on every commit. 
 
-Finally on screen resolutions, CrossKnowledge recommends resolutions contained less than 858x575 px with a full screen button in the content.
+### Testing SCORM content
 
-### Content mass upload
+The CKLS has a specific SCORM Test Environment that allows you to test your SCORM content. You can upload the content, view the SCORM logs and verify that all tracking data is sent correctly. This will ensure that your content is communicating correctly with the CKLS before you open the course to your learners. 
 
-It is possible too to upload your scorm / aicc / url / mp4 packages in bulk through the SFTP access of your platform.
-To do so :
-- File name will need to be a code that will be used in your metadata file. eg. VODE100.zip, TMEL318.mp4, XEIL678.pdf
-- For multilingual content, one package per language will be issued. Each content will be inside a folder named with the language.
+Please contact your Client Success team if you would need assistance doing this. 
 
-### Metadata format
+## Mass upload of content
 
-Content delivery should be linked with metadata file described below. The format should be a CSV flat file with comma delimeter encoded in UTF-8 w-out BOM. Column name is required.
+The CKLS allows the upload of content packages “in bulk” in case you would like to import a large third-party catalog. 
 
-Column name | Description
----|---
-`courseid` | Content code
-`locale` | Content language (eg. fr-FR, en-GB, pt-BR)
-`title` | Content title
-`description` | Content description
-`duration` | Content duration
-`authorid` | Content author id - Author needs to be created first in client LMS
-`keywords` | Content tags or keywords separated by pipe (eg. Word "Pipe" Management)
-`level` | Content difficulty (1, 2 or 3)
-`objectives` | Content purpose/objective (text)
-`detailedcontent` | Content description details
-`targetaudience` | Content target audience
-`thumbnail` | Content url to thumbnails (Max. 200.0 MB, Size: 640x360px)
-`url` | Content url, if content is weblink
-`runtime` | Content runtime (eg.youtube_learning_object_guid,aicc_learning_object_guid,automatic_text,E,file_lo_guid,zip_lo_guid,flash_learning_object_guid,link_lo_guid,SCORM,slideshare_lo_guid,telelangue_learning_object_guid,video_learning_object_guid)
-`type` | Content type (eg. Video, Interactive, Reading, Questionnaire, Website, Audio, work to Submit, in Class assessment, Picture, Doc to download)
-`scoreisprogress` | Content scorm option to save progress score variable (value = Y)
-`themes` | Content themes (eg. Theme1>Subtheme1 "Pipe" Theme2)
-
-### Testing your Scorm packages
-
-Please contact your system integration consultant to open you a sandbox in order to test your contents
+Please contact your Client Success team if you would need assistance doing this. 
