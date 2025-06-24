@@ -156,6 +156,8 @@ Production : 3.125.172.227 ; 3.65.7.102 ; 3.64.247.80
 
 @crossknowledge.com domain must be whitelisted as a trusted sender.
 
+NOTE: If a high number of invalid email addresses is detected on a specific instance, email jobs for that instance may be deactivated without previous warning, as it could negatively impact the overall email delivery for all customers.
+
 ### Supported email configuration scenario :
 
 <table border="1" cellpadding="10" cellspacing="0">
