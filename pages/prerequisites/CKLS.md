@@ -76,6 +76,7 @@ $ ssh-keygen -t rsa -b 4096 -a 100
 
 - Should be renewed once a year on customer request.
 
+
 ### Domain white-listing
 The following domain names should be whitelisted by customers and their partners.
 ```txt
