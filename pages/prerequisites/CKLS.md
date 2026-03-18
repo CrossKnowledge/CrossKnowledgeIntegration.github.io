@@ -64,9 +64,17 @@ The following media extensions should be authorised.<br/>
 Customers should provide CrossKnowledge with a valid public key for access to be granted on CrossKnowledge SFTP servers.
 
 SSH keys should follow the following rules:
-- Use 4096 bits;
-- Should be renewed once a year on customer request.
+- Option 1: Modern Security (Recommended) We recommend the Ed25519 algorithm for its superior security and performance. It is supported by recent versions of WinSCP, FileZilla, Cyberduck, and OpenSSH.
+```bash
+$ ssh-keygen -t ed25519 -a 100
+```
 
+- Option 2: Legacy Compatibility If you are using an older client or access to a legacy system that does not support Ed25519, please use RSA 4096 instead.
+```bash
+$ ssh-keygen -t rsa -b 4096 -a 100
+```
+
+- Should be renewed once a year on customer request.
 ### Domain white-listing
 The following domain names should be whitelisted by customers and their partners.
 ```txt
