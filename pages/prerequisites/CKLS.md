@@ -193,8 +193,7 @@ In case an email having a FROM attribute not belonging to either client.com or c
 Dedicated IPs can be used for whitelisting or security purposes.
 </p>
 </td></tr>
-<tr>
-</td></tr></tbody></table>
+</tbody></table>
 
 Maximum message size (including attachments) is limited to 10 MB per message (after base64 encoding).
 
