@@ -125,7 +125,7 @@ Please follow this link to find [CloudFlare IP ranges](https://www.cloudflare.co
 
 #### Europe CKLS https://*.eu.crossknowledge.com:
 ```txt
-sftp server : sftp-aws.eu.crossknowledge.com (52.58.183.197)
+sftp server : sftp.eu.crossknowledge.com (52.58.183.197)
 ```
 
 <br/>
@@ -194,13 +194,6 @@ Dedicated IPs can be used for whitelisting or security purposes.
 </p>
 </td></tr>
 <tr>
-<td>All emails are sent directly by the client's SMTP relay
-</td>
-<td>
-<p>CKLS application is then authorized to directly pass emails flow to a remote client's relay using basic SMTP authentication method (login and password).<br>
-CrossKnowledge will not provide any IP ranges (autoscalling CKLS servers may have various IPs changing regularly). SMTP session can be secured by a TLS connection. SMTP server (host and port), login and password to be provided by Client's Email team.<br>
- <b>WARNING:</b> Microsoft Office365 is not an viable option as the company <a href="[url](https://techcommunity.microsoft.com/t5/exchange-team-blog/basic-authentication-deprecation-in-exchange-online-may-2022/ba-p/3301866)">deprecated their basic authentication method on October 1st, 2022</a>
-</p>
 </td></tr></tbody></table>
 
 Maximum message size (including attachments) is limited to 10 MB per message (after base64 encoding).
@@ -226,15 +219,6 @@ sesmailna.crossknowledge.com
 email-smtp.eu-west-1.amazonaws.com
 sesmaileu.crossknowledge.com
 ```
-
-## Sharepoint pre-requisites
-
-### Sharepoint 2010
-Microsoft Edge (latest version), Mozilla Firefox (latest version), Google Chrome (latest version)
-### Sharepoint 2013
-Microsoft Edge (latest version), Mozilla Firefox (latest version), Google Chrome (latest version)<br/>
-
-{% include note.html content="This plugin is not supported on the latest version of Office 365 (SharePoint 2016)." %}
 
 ## URL of CKLS platform
 ### Supported formats
